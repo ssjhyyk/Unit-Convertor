@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}" class="stylesheets">
+    <title>Unit Convertor</title>
+</head>
+
+<body>
+    <center>
+        <h1>Unit Convertor</h1>
+        <div class="box">
+            <form action='/convert' method='post'>
+                <label for=' distance'>Distance: </label>
+                <br>
+                <input type='number' id='distance' name='distance' required>
+                <br>
+                <select id='unit' name='unit' required>
+                    <option value="">-- Select Unit --</option>
+                    <option value="miles">Miles</option>
+                    <option value="km">Kilometers</option>
+                </select>
+                <br>
+                <button type='submit'>Convert</button>
+            </form>
+        </div>
+    </center>
+</body>
+
+</html>
